@@ -10,11 +10,11 @@
 <div class="job-listing">
     <p th:text="${'Name: ' + skill.name}"></p>
     <p th:text="${'Description: ' + skill.description}"></p>
-    <p> Jobs:
-        <ul>
-            <li th:each="job : ${skill.jobs}">
-                <a th:href="@{'/view/' + ${job.id}}" th:text="${job.name}"></a>
-            </li>
-        </ul>
-    </p>
+<!--    <p> Jobs:-->
+<!--        <ul>-->
+<!--            <li th:each="job : ${skill.jobs}">-->
+<!--                <a th:href="@{'/view/' + ${job.id}}" th:text="${job.name}"></a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </p>-->
 </div>
