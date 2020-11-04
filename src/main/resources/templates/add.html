@@ -5,7 +5,8 @@
 
 <nav th:replace="fragments :: page-header"></nav>
 
-<h1>Add Job</h1>
+<h1 th:text="${title}">Add Job</h1>
+<h1 th:text="${myerrors}">Add Job</h1>
 
 <form method="post" style="max-width:600px;">
     <div class="form-group">
@@ -19,8 +20,7 @@
         <select name="employerId">
             <option th:each="employer : ${employers}"
                     th:text="${employer.name}"
-                    th:value="${employer.id}"
-            >
+                    th:value="${employer.id}" >
             </option>
         </select>
         <a th:href="@{'/employers/add'}">Add Employers</a>

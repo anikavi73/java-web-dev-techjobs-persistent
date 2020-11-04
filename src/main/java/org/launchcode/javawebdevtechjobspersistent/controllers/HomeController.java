@@ -49,10 +49,11 @@ public class HomeController {
 
     @PostMapping("add")
     public String processAddJobForm(@ModelAttribute @Valid Job newJob,
-                                       Errors errors, @RequestParam int employerId, @RequestParam List<Integer> skills, Model model) {
+                                       Errors errors, Model model, @RequestParam int employerId, @RequestParam List<Integer> skills) {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "Please try again! Add Job" );
+            model.addAttribute("myerrors", errors.toString() );
             return "add";
         }
 
@@ -76,7 +77,7 @@ public class HomeController {
             model.addAttribute("job", job);
             return "view";
         } else {
-            return "redirect:../";
+            return "add";
         }
     }
 }

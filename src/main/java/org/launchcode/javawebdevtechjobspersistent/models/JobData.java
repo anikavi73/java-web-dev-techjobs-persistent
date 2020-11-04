@@ -30,7 +30,7 @@ public class JobData {
         }
 
         if (column.equals("all")){
-            results = findByValue(value, allJobs);
+           results = findByValue(value, allJobs);
             return results;
         }
         for (Job job : allJobs) {
@@ -54,9 +54,8 @@ public class JobData {
         } else {
             theValue = job.getSkills().toString();
         }
-
-        return theValue;
-    }
+            return theValue;
+   }
 
     /**
      * Search all Job fields for the given term.
