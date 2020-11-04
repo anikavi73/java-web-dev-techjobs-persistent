@@ -10,6 +10,7 @@ public class Job extends AbstractEntity{
 
     @ManyToOne
 //    @NotNull(message = "employer is required")
+// commenting out @NotNull let the program to work
     private Employer employer;
 
     @ManyToMany
